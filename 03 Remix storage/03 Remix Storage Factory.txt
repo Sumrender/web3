@@ -1,0 +1,8 @@
+// should contract name == file name ?
+
+// exporting contract to another contract
+
+// creating contracts inside another contract
+// ex: array of contracts.
+
+// Inheritances & Overrides

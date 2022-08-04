@@ -1,0 +1,70 @@
+bitcoin: satoshi nakamoto?
+
+11:15 => define smart contracts
+
+bitcoin is intentionally 'turning incomplete' only for value.
+
+the oracle problem: solved by chainlink
+
+16:28 => web1 vs web2 vs web3
+
+why smart contracts? what problem are they solving?
+=> they are trust minimized agreements
+   or unbreakable promises
+
+   ex: mcdonalds scam: could've been solved by smart contracts.
+       robinhood scam: trade market
+       => solved by decentralized exchanges like uniswap
+
+
+features of blockchain
+1. decentralized
+2. transparency and flexibility
+3. pseduo-anonymous
+4. speed & efficiency: money transfer
+5. security and immutability
+6. Counterparty risk removal, not hackable
+
+what have smart contracts done so far?
+1. DeFi, ex: robinhood 
+2. DAOs
+3. NFTs
+
+Starting with blockchain
+
+1. making metamask wallet and transaction on rinkeby test network
+2. intro to gas: price to conduct transaction 
+
+3. How blockchains work
+  andersbrown site
+  public and private key: verify and sign transactions resepectively
+
+  ether > gwei > wei: units of etherium
+
+high level blockchain fundamentals
+1:43:00 - consensus, proof of work, proof of stake
+  consensus is the mech used to agree on the state of a blockchain
+
+consensus can be roughly broken into: 
+  1. chain selection 
+  2. Syblil Resistance
+
+  Nakamoto Consensus: the longest is the real blockchain, obvious, since hard to mine the entire blockchain
+  ETH and BTC are proof of work and follow Nakamoto Consensus
+  => may change in the future
+  ETH 2.0 will be proof of stake.
+  what is proof of stake.
+
+Attacks
+  Sybil attacks
+  51% Attack 
+
+  now these attacks are hard, since users may lose stake when making 
+  so many anonymous accounts, they will have to put some stake in them
+  ...
+
+Sharding: blockchain of blockchains
+
+Layer 1: Base Layer. ex: Ethereum
+Layer 2: Application built on Base Layer. ex: chainlink
+Rollups: kind of like sharded chains

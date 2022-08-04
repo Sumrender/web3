@@ -1,0 +1,53 @@
+// sending ETH through a function & reverts
+
+Smart Contracts can hold funds just like how wallets can
+
+  simple fund function
+  concept of revert 
+
+Chainlinks and Oracles
+
+The Oracle Problem:
+  Smart Contracts are unable to connect with external systems,
+  data feeds, APIs, existing payment systems or any other off-chain 
+  resources on their own.
+
+3:51:00 => Now working with Rinkeby Network whereas tutorial 
+ uses kovan Network.
+
+Interfaces and Price Feeds
+  Interfaces are used for ABI purposes...
+  and Address is also required to fetch USD price from 
+  external contract 
+
+Importing from GitHub and NPM
+  We can just use Interfaces by exporting them through NPM packages
+
+Concept of checked and unchecked numbers
+  SafeMath library used for check and unchecked numbers
+  ex: of adding 1 to a uint8 num = 255;
+  but here num variable can store more bits, 
+  so here it will show error, but this was not the case 
+  in the older version, where it used to start over from 0
+  after getting filled
+
+Creating withdraw function:
+  Withdraw can be done by any of the 3 functions:
+  transfer, send, call;
+
+  You can send Ether to other contracts by
+  transfer (2300 gas, throws error)
+  send (2300 gas, returns bool)
+  call (forward all gas or set gas, returns bool)
+
+After deploying successful FundMe contract,
+now using constant and immutable keyword to 
+reduce amount of gas used
+
+for further gas optimization
+  use errors instead of "Not Owner" strings in require line
+
+Fallback and receive() in Ether
+
+// FINAL PROJECT
+https://github.com/PatrickAlphaC/fund-me-fcc.git

@@ -1,0 +1,11 @@
+// local setup
+    can either compile contracts in our code
+    or compile them separately
+
+Ganache and Networks
+    In Remix IDE We were deploying either on Javascript VM or a 
+    test network.
+    Now we will see how to do it, here
+
+We will be using Ether.js which is a wrapper to make API calls
+for deploying and other stuff
