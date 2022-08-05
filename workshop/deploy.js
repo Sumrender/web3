@@ -1,27 +1,36 @@
 const ethers = require("ethers");
-const fs = require("fs");
+const fs = require("fs-extra");
 
 async function main() {
   // blockchain address
   // http://127.0.0.1:7545
-  const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:7545");
-  const wallet = new ethers.Wallet("9cc984088a1ff3b4cea69c0d6e9475597cfc8e07cd8840121984fc40ebb77c24", provider);
 
-  const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
-  const binary = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
+  const provider = new ethers.providers.JsonRpcProvider(
+    "http://127.0.0.1:7545"
+  );
+  const wallet = new ethers.Wallet(
+    "c00d78f233b015b7a133bb4bf9b27fba5183b622a591547934ee351b7a6af425",
+    provider
+  );
 
-  const contractFactory = new ethers.ContractFactory(abi, binary, wallet);
-  console.log("Deploying, please wait");
+  // To deploy our contract along with provider and wallet, we also
+  // need abi and binary of the contract
+  const abi = fs.readFileSync("SimpleStorage_sol_SimpleStorage.abi", "utf8");
+  const binary = fs.readFileSync(
+    "./SimpleStorage_sol_SimpleStorage.bin",
+    "utf8"
+  );
 
+  const contractFactory = new ethers.ContractFactory(abi, bin, wallet);
+  console.log("Deploying, please wait...");
   const contract = await contractFactory.deploy();
-  // stop here! wait for contract to deploy
+  // STOP here! and wait for contract to deploy
   console.log(contract);
-
 }
 
-main().
-  then(() => process.exit(0))
+main()
+  .then(() => process.exit(0))
   .catch((error) => {
-    console.log(error)
+    console.log(error);
     process.exit(1);
   });
