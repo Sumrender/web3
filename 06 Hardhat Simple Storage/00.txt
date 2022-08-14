@@ -1,0 +1,50 @@
+01 deploying simpleStorage.sol in hardhat
+
+02 networks in hardhat: 8:41:45
+    adding rinkeby network to hardhat.config.js
+
+    verifying and publishing contract
+
+03 Interacting with contracts on hardhat: 9:06:38
+$ yarn hardhat run scripts/deploy.js --network rinkeby
+
+04 custom hardhat tasks
+    creating a task in hardhat
+    // can either use tasks or scripts.
+
+05 hardhat localhost node
+
+$ yarn hardhat node 
+// it spins up a local blockchain network like ganache
+for localhost, first add localhost in network inside hardhat.config.json
+and to run 
+$ yarn hardhat run scripts/deploy.js --network localhost
+
+
+06 the hardhat console => 9:23:12
+$ yarn hardhat console --network localhost
+
+// can use console to run code and do anything
+
+07 Running tests
+
+    tests can be run by:
+    $ yarn hardhat test 
+
+    to run an individual test 
+    $ yarn hardhat test --grep keyword-only-present-in-that-describe-test-string 
+
+    or by doing 
+
+    it.only in front of the test you want to run
+
+    // assert and expect do the same things
+
+08 Hardhat gas reporter
+    // can be used with command $ yarn hardhat test
+    // output added in gitignore
+
+09 Solidity Coverage: hardhat-plugin
+    // // output added in gitignore
+
+10 hardhat waffle

@@ -2,10 +2,50 @@
     can either compile contracts in our code
     or compile them separately
 
-Ganache and Networks
-    In Remix IDE We were deploying either on Javascript VM or a 
-    test network.
-    Now we will see how to do it, here
+    after copying SimpleStorage.sol contract, install solc to 
+    compile the contract and open Ganache to get local blockchain network.
 
-We will be using Ether.js which is a wrapper to make API calls
-for deploying and other stuff
+    Ganache and Networks
+        In Remix IDE We were deploying either on Javascript VM or a 
+        test network.
+        Now we will see how to do it, here
+
+
+
+    Copying Remote Procedure Call URL (RPC) from ganache 
+
+    We will be using Ether.js which is a wrapper to make API calls
+    for deploying and other stuff
+
+    after writing the code for deploying, we can see that the code deployed
+    successfully
+
+7:10:24 Adding Transaction Overrides
+    In the ContractFactory.deploy({gasLimit, gasPrice})
+    // a js object can be passed
+
+    01 Transaction Receipts
+
+    02 Sending a "raw" Transaction in ethersjs
+
+    03 Interacting with Contracts in Ethersjs
+
+    04 Environment Variables
+
+    05 Securing private key:
+        either add .env Variables before node deploy.js 
+        or 
+        make a file encrypt.js with script to encrypt env vars.
+
+
+        history -c // to clear terminal history
+
+    06 Optional Prettier Formatting, creating .prettierrc file simple
+
+    07 Deploying to a Testnet or a Mainnet
+
+    08 Verifying on the Block Explorers
+    we can add contract code to etherscan as did on address
+    0xD99D886DB2Ab325AD32926A27f8f23D9583663c7
+
+    09 Alchemy Dashboard & The Mempool

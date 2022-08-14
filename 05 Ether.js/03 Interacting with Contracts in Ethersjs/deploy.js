@@ -21,11 +21,22 @@ async function main() {
     "utf8"
   );
 
-  const contractFactory = new ethers.ContractFactory(abi, bin, wallet);
+  const contractFactory = new ethers.ContractFactory(abi, binary, wallet);
   console.log("Deploying, please wait...");
   const contract = await contractFactory.deploy();
-  // STOP here! and wait for contract to deploy
-  console.log(contract);
+  await contract.deployTransaction.wait(1);
+
+  // GET NUMBER from contract, doesn't cost gas
+  const currentFavoriteNumber = await contract.retrieve();
+  // console.log(currentFavoriteNumber); // gives json object with hex
+  console.log(`Current Favorite Number: ${currentFavoriteNumber.toString()}`);
+
+  // UPDATE NUMBER
+  const transactionResponse = await contract.setFavNumber("1000");
+  const transactionReceipt = await transactionResponse.wait(1);
+
+  const updatedFavoriteNumber = await contract.retrieve();
+  console.log(`Current Favorite Number: ${updatedFavoriteNumber.toString()}`);
 }
 
 main()
