@@ -7,6 +7,7 @@ contract SimpleStorage {
 
     // simple first test contract!
 
+    // If not initialized, it is initialized to 0 by default
     uint256 favNumber = 100; 
 
     function setFavNumber(uint256 num) public {

@@ -1,0 +1,45 @@
+Storage in Solidity
+
+work with storage contract and play with locations and data 
+and what not
+
+11:52 => Gas Optimizations using Storage Knowledge
+running gas-reporter by enabling it in hardhat-config
+
+EVM opcodes cost gas
+ex: add requires 3gas
+
+creating a cheaper withdraw function, then comparing gasReport
+
+12:05:29 => Solidity Chainlink Style Guide
+	once again refactoring our code
+
+and creating getter functions since whoever uses our codes
+gets proper API and doesn't have to work with weird s_variable 
+or i_variable
+
+changing unit tests variable use with function calls.
+
+Replacing require with revert, since with require we are storing a
+massive string which takes a lot of storage,
+
+only done with owner test, can do for more
+
+12:10:59 => STAGING TESTS
+
+wasted so much time on staging tests,
+due to not adding gas in hardhat rinkeby limit,
+that was the key point
+
+12:17:59 => Running Scripts on a Local Node
+
+creating a script fund.js
+
+set up local chain
+$ yarn hardhat node
+run fund.js script
+$ yarn hardhat run scripts/fund.js --network localhost
+
+// ADDING SCRIPTS TO PACKAGE.JSON
+
+// PUSHING TO GITHUB

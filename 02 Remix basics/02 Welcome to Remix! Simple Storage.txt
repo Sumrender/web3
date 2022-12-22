@@ -1,4 +1,5 @@
 starting with remix ide
+remix.ethereum.org
 
 2:09 need to read how licenses work
 
@@ -7,12 +8,30 @@ contract => class
 
 pure functions?
 
+public variable implicitly get assigned a function
+that returns its values
+
+default visibility is internal
+
+view and pure functions, when called alone don't 
+spend gas 
+
+Gas is only used, when we make some modification to
+the blockchain
+
 view functions => disallow modification state;
  also disallow you to read from blockchain state
 
+EVM overview:
+EVM can access and store info in 6 places:
+Stack; Memory; Storage; Calldata; Code; Logs
 
 calldata: temp var without update permission
+          temp var that cannot be modified
+
 memory: temp var with update permission
+        temp var that can be modified
+        
 storage: not temp, default forms of initialized variables
 
 EVM => Ethereum Virtual Machine

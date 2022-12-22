@@ -1,0 +1,26 @@
+When Building Dapps, you usually have 2 repos
+
+- One for smart contracts
+- One for front end/ websites
+
+How websites work with web3 wallets, short video
+- it basically said that, wallets allow us to link with a node on 
+ a blockchain.
+
+Creating a simple html file
+
+Connecting HTML to metamask
+
+can add try catch to index.js connect function
+
+ES6 vs NodeJS
+
+create fund function
+for the fund function to work, we require 
+    // provider or connection to the blockchain
+    // signer / wallet / someone with some gas
+    // contract that we are interacting with
+    // ABI and address
+
+13:07 => Sending a Transaction from a website
+    creating a constants.js file to store abi and address.

@@ -19,6 +19,7 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: 4,
       blockConfirmations: 6,
+      gas: 6000000,
     },
     localhost: {
       url: "http://127.0.0.1:8545/",

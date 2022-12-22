@@ -1,6 +1,16 @@
-// sending ETH through a function & reverts
+Payable functions require payable keyword in them.
+
+// 3:34:00 sending ETH through a function & reverts
+
+we want a contract that can
+// Get funds from users
+// withdraw funds
+// set a minimum funding value in USD
 
 Smart Contracts can hold funds just like how wallets can
+
+1 Eth = 1e18 wei
+Money math is done in terms of wei.
 
   simple fund function
   concept of revert 
@@ -15,6 +25,9 @@ The Oracle Problem:
 3:51:00 => Now working with Rinkeby Network whereas tutorial 
  uses kovan Network.
 
+can use chain link for getting random number, chainlink keepers?, and also making
+API calls
+
 Interfaces and Price Feeds
   Interfaces are used for ABI purposes...
   and Address is also required to fetch USD price from 
@@ -23,22 +36,53 @@ Interfaces and Price Feeds
 Importing from GitHub and NPM
   We can just use Interfaces by exporting them through NPM packages
 
+4:24:00 Revise fund function
+
+After creating functions, now we will go a step further 
+and create a library to make our code more cleaner.
+Furthermore, we will create PriceConverter.sol which 
+will have functions which work on uint256, so that I can 
+directly use 
+  msg.value.getConversionRate();
+  instead of getConversionRate(msg.value);
+
 Concept of checked and unchecked numbers
   SafeMath library used for check and unchecked numbers
   ex: of adding 1 to a uint8 num = 255;
   but here num variable can store more bits, 
   so here it will show error, but this was not the case 
   in the older version, where it used to start over from 0
-  after getting filled
+  after getting filled.
+
+  using unchecked keyword, i can remove checking in solidity 
+  versions>0.8;
+  why will I use unchecked keyword?
+  If I am confident, that my code will not surpass the limit
+  then I should use it since it makes code more gas efficient.
 
 Creating withdraw function:
   Withdraw can be done by any of the 3 functions:
-  transfer, send, call;
+  
+  transfer, 
+  send, 
+  call;
 
   You can send Ether to other contracts by
   transfer (2300 gas, throws error)
   send (2300 gas, returns bool)
   call (forward all gas or set gas, returns bool)
+
+  at 4:50:52 we can notice that at this point, anyone can
+  withdraw funds, but what's the use of that?
+  we want only the deployer of the contract to be able to
+  withdraw money while anyone can fund it.
+
+Basic Solidity Constructor
+  use the Constructor to set the owner when the contract
+  is deployed.
+
+now use basic function modifier to make sure that onlyOwner
+can withdraw fund from it.
 
 After deploying successful FundMe contract,
 now using constant and immutable keyword to 
@@ -47,7 +91,9 @@ reduce amount of gas used
 for further gas optimization
   use errors instead of "Not Owner" strings in require line
 
-Fallback and receive() in Ether
+Fallback and receive() in solidity
 
 // FINAL PROJECT
 https://github.com/PatrickAlphaC/fund-me-fcc.git
+
+5:28:00 Recap of lesson 04

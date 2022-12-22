@@ -10,8 +10,9 @@ async function main() {
   // 02 VERIFYING CONTRACT
 
   // what happens when we deploy to our local hardhat network?
-  // console.log(netwok.config);
-  if (network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY) {
+  // console.log(netwok.config);  // gives details about all the networks
+  if (network.config.chainId === 5 && process.env.ETHERSCAN_API_KEY) {
+    // 5 is the chainId for goerli network
     console.log("waiting for block txes...");
     await simpleStorage.deployTransaction.wait(6);
     // it means wait 6 blocks

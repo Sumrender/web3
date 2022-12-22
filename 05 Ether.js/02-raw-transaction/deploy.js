@@ -26,7 +26,7 @@ async function main() {
   // const contract = await contractFactory.deploy();
 
   console.log("Let's deploy with only transaction data!");
-  const nonce = await wallet.getTransactionCount();
+  const nonce = await wallet.getTransactionCount(); // need to know more about nonce, here it is only referring to transaction count
   const tx = {
     nonce,
     gasPrice: 20000000000,

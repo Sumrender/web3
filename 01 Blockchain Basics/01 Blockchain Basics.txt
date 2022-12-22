@@ -6,6 +6,8 @@ bitcoin is intentionally 'turning incomplete' only for value.
 
 the oracle problem: solved by chainlink
 
+Hybrid smart contracts: contracts linked with some oracle chainlink
+
 16:28 => web1 vs web2 vs web3
 
 why smart contracts? what problem are they solving?
@@ -41,9 +43,15 @@ Starting with blockchain
 
   ether > gwei > wei: units of etherium
 
+1:10:00 BLOCKCHAIN BASICS
+
+The more people use a chain, the more expensive it is to send transactions.
+
 high level blockchain fundamentals
 1:43:00 - consensus, proof of work, proof of stake
   consensus is the mech used to agree on the state of a blockchain
+
+What is EIP 1559
 
 consensus can be roughly broken into: 
   1. chain selection 

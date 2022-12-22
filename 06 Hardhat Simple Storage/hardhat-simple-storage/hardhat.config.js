@@ -18,6 +18,11 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: 4,
     },
+    goerli: {
+      url: process.env.GOERLI_RPC_URL,
+      accounts: [process.env.LATEST_PRIVATE_KEY],
+      chainId: 5,
+    },
     localhost: {
       url: "http://127.0.0.1:8545/",
       // accounts already provided by hardhat
