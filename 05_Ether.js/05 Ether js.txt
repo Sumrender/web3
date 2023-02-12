@@ -1,0 +1,93 @@
+// First of all basic debugging strategies
+
+// Difference between synchronous and asynchronous programming
+// synchronous
+1. put popcorn in microwave
+2. wait for popcorn to finish
+3. pour drinks for everyone 
+
+// asynchronous
+1. put popcorn in microwave 
+2. pour drinks for everyone
+3. wait for popcorn to finish
+
+
+// local setup
+    can either compile contracts in our code
+    or compile them separately
+
+    after copying SimpleStorage.sol contract, install solc to 
+    compile the contract and open Ganache to get local blockchain network.
+
+    To compile, just paste this into package.json scripts
+    // yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol
+
+
+    Ganache and Networks
+        In Remix IDE We were deploying either on Javascript VM or a 
+        test network.
+        Now we will see how to do it, here
+
+    Copying RPC from ganache 
+    RPC stands for Remote Procedure Call URL
+
+7:00:00 ETHERS.JS
+    What is Ethers? 
+    The ethers.js library aims to be a complete and compact 
+    library for interacting with the Ethereum Blockchain and 
+    its ecosystem.
+
+    basically a wrapper for rpc endpoint api calls
+
+    We will be using Ether.js which is a wrapper to make API calls
+    for deploying and other stuff
+
+    after writing the code for deploying, we can see that the code 
+    deployed successfully
+
+    first we need to connect to our ganache blockchain
+    For that we require a provider and wallet.
+
+    refer 01-simple-deployment
+    ContractFactory is an object used to deploy contracts.
+
+7:10:24 Adding Transaction Overrides
+    In the ContractFactory.deploy({gasLimit, gasPrice})
+    // a js object can be passed
+
+01 Transaction Receipts
+    console.log()
+
+02 Sending a "raw" Transaction in ethersjs
+    refer 02-raw-transaction
+    instead of using ContractFactory object, we are 
+    sending a transaction ourselves by providing all the
+    data in a variable "tx"
+
+03 Interacting with Contracts in Ethersjs
+
+04 Environment Variables
+
+05 Securing private key:
+        either add .env Variables before node deploy.js 
+        or 
+        make a file encrypt.js with script to encrypt env vars.
+
+
+        history -c // to clear terminal history
+
+06 Optional Prettier Formatting, creating .prettierrc file simple
+
+07 Deploying to a Testnet or a Mainnet
+
+08 Verifying on the Block Explorers
+    we can add contract code to etherscan as did on address
+    0xD99D886DB2Ab325AD32926A27f8f23D9583663c7
+
+09 Alchemy Dashboard & The Mempool
+
+other options: quicknode, moralis, infura etc.
+
+    A mempool or a memory pool is basically a waiting area for pending transactions.
+
+8:14:18 Recap

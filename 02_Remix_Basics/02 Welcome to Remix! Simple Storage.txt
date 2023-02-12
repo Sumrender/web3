@@ -1,0 +1,55 @@
+starting with remix ide
+remix.ethereum.org
+
+2:09 need to read how licenses work
+
+solidity language basics
+contract => class
+
+pure functions => disallow modification or access
+                of state
+view functions => disallow modification of state        
+
+public variable implicitly get assigned a function
+that returns its values
+
+default visibility is internal
+
+view and pure functions, when called alone don't 
+spend gas 
+but cost gas when called inside a gas using function
+
+// DATA TYPES 
+string, uint256, int256, bool, bytes???
+
+// Creating an array of struct people
+struct People {
+        uint256 favNumber;
+        string name;
+}
+
+People[] public people;
+
+// MAPPING
+mapping(string => uint256) public nameToFavNum;
+
+Gas is only used, when we make some modification to
+the blockchain
+
+EVM overview:
+EVM can access and store info in 6 places:
+Stack; Memory; Storage; Calldata; Code; Logs
+
+calldata: temp var without update permission
+          temp var that cannot be modified
+
+memory: temp var with update permission
+        temp var that can be modified
+        
+storage: not temp, default forms of initialized variables
+
+struct, mapping, arrays, strings require memory/calldata
+to be given when passed as parameters
+
+EVM => Ethereum Virtual Machine
+// ex: Avalanche, Fantom, Polygon
